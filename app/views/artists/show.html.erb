@@ -1,17 +1,15 @@
-<p>
-  <strong>Name:</strong>
+<h1>
   <%= @artist.name %>
-</p>
-
-<h4>Photo</h4>
+</h1>
+<hr>
 <% @artist.photos.each do |photo| %>
   <%= image_tag photo.image.thumbnail %>
 <% end %>
 
-<h2>Songs</h2>
+<h4>Songs in database</h4>
 <%= render @artist.songs %>
 
-<h2>Add a song:</h2>
+<h4>Add a song:</h4>
 <%= render 'songs/form' %>
 
 
