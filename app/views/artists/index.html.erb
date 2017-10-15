@@ -1,17 +1,16 @@
 
-<h1>List of artists</h1>
-
+<h1>Codaisseurify</h1>
+<hr>
 <%= link_to 'New artist', new_artist_path %>
-
+<hr>
 <table>
   <tr>
-    <th>name</th>
+    <th></th>
   </tr>
 
   <% @artists.each do |artist| %>
     <tr>
-      <td><%= artist.name %></td>
-      <td><%= link_to 'Show', artist_path(artist) %></td>
+      <td><%= link_to artist.name, artist_path(artist)%></td>
       <td><%= link_to 'Edit', edit_artist_path(artist) %></td>
       <td><%= link_to 'Destroy', artist_path(artist),
         method: :delete,

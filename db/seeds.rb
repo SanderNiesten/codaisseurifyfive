@@ -2,9 +2,10 @@ Photo.destroy_all
 Song.destroy_all
 Artist.destroy_all
 
-queen                 = Artist.create(name: "Queen")
+
 foo_fighters          = Artist.create(name: "Foo Fighters")
 nirvana               = Artist.create(name: "Nirvana")
+queen                 = Artist.create(name: "Queen")
 
 bohemian_rhapsody     = Song.create(name: "Bohemian Rhapsody", artist: queen)
 i_want_to_break_free  = Song.create(name: "I want to break free", artist: queen)
