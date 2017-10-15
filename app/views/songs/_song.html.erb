@@ -1,9 +1,7 @@
 <p>
   <%= song.name %>
-</p>
-
-<p>
-  <%= link_to 'Destroy Song', [song.artist, song],
+  <%= link_to 'Delete Song', [song.artist, song],
                method: :delete,
                data: { confirm: 'Are you sure?' } %>
+
 </p>
