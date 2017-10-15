@@ -2,5 +2,13 @@
   <strong>Name:</strong>
   <%= @artist.name %>
 </p>
+
+<h2>Songs</h2>
+<%= render @artist.songs %>
+
+<h2>Add a song:</h2>
+<%= render 'songs/form' %>
+
+
 <%= link_to 'Edit', edit_artist_path(@artist) %> |
 <%= link_to 'Back', artists_path %>
