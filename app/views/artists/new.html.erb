@@ -1,6 +1,21 @@
 <h1>New Artist</h1>
 
 <%= form_with scope: :artist, url: artists_path, local: true do |form| %>
+
+<% if @artist.errors.any? %>
+  <div id="error_explanation">
+    <h2>
+      <%= pluralize(@artist.errors.count, "error") %> prohibited
+      this artist from being saved:
+    </h2>
+    <ul>
+      <% @artist.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
   <p>
     <%= form.label :name %><br>
     <%= form.text_field :name %>
