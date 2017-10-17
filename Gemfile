@@ -70,6 +70,7 @@ gem 'faker', '1.6.6'
 
 gem 'rails_12factor', group: :production
 
+gem 'shoulda-matchers', '~> 3.1'
 
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
