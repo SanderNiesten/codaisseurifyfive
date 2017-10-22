@@ -47,11 +47,14 @@ group :development do
 end
 
 group :development, :test do
-  gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'selenium-webdriver'
+  gem "chromedriver-helper"
 end
 
 group :test do
-  gem 'capybara', '~> 2.9', '>= 2.9.1'
+  gem 'database_cleaner'
 end
 
 # Use Bootstrap for styling
